@@ -1,0 +1,52 @@
+name: "Daily Job Report"
+
+on:
+  schedule:
+    # Runs at 3:00 AM IST (9:30 PM UTC previous day)
+    - cron: "30 21 * * *"
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  scrape-and-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+      GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+      AI_ANALYSIS: ${{ secrets.AI_ANALYSIS || 'true' }}
+      PLATFORMS: ${{ secrets.PLATFORMS || 'both' }}
+      BATCH_AI: ${{ secrets.BATCH_AI || 'true' }}
+      USER_NAME: ${{ secrets.USER_NAME || '' }}
+      SEARCH_KEYWORDS: ${{ secrets.SEARCH_KEYWORDS || '' }}
+      SEARCH_LOCATION: ${{ secrets.SEARCH_LOCATION || 'India' }}
+      JOB_COUNT: ${{ secrets.JOB_COUNT || '20' }}
+      DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID || '' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run JobPulse AI
+        id: run
+        run: python run.py
+
+      - name: Send failure alert
+        if: failure()
+        env:
+          FAILED_STEP: "Job scraping and reporting"
+          GITHUB_RUN_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        run: python scripts/send_failure_alert.py

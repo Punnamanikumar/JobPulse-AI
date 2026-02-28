@@ -1,0 +1,85 @@
+═══════════════════════════════════════════════════════════════
+  SAMPLE CANDIDATE PROFILE — Replace with your own details
+═══════════════════════════════════════════════════════════════
+
+👤 PERSONAL INFORMATION
+──────────────────────────────────────────────────────────────
+Full Name: Your Name
+Role: Your Role (e.g., Full Stack Developer | Backend Engineer)
+Total Experience: X Years
+Location: Your City, Country
+Email: your.email@example.com
+LinkedIn: https://linkedin.com/in/yourprofile
+GitHub: https://github.com/yourusername
+Availability: Open to opportunities
+
+🧠 PROFESSIONAL SUMMARY
+──────────────────────────────────────────────────────────────
+Describe your experience, specializations, and key achievements.
+Be specific about technologies, frameworks, and domains you work in.
+The more detail you provide, the more accurate the AI matching will be.
+
+Example:
+Backend Developer with X years of experience in building scalable
+applications using [your tech stack]. Specialized in [your specializations].
+
+💼 WORK EXPERIENCE
+──────────────────────────────────────────────────────────────
+
+Company: Your Company Name
+Role: Your Role
+Duration: Start – End
+
+Key Responsibilities & Achievements:
+  - Describe your key projects and achievements
+  - Include specific technologies used
+  - Mention measurable impacts (e.g., "reduced latency by 40%")
+  - Be specific about your contributions
+
+🛠️ TECHNICAL SKILLS
+──────────────────────────────────────────────────────────────
+
+Programming Languages:
+  List your programming languages (e.g., Python, JavaScript, TypeScript)
+
+Frameworks & Libraries:
+  List frameworks (e.g., React, Express, Django, Flask)
+
+Databases:
+  List databases (e.g., MongoDB, PostgreSQL, MySQL, Redis)
+
+Cloud & DevOps:
+  List cloud services and tools (e.g., AWS, Docker, Kubernetes)
+
+Other:
+  Any other relevant skills (e.g., CI/CD, Testing, Monitoring)
+
+🚀 PROJECTS
+──────────────────────────────────────────────────────────────
+
+Project: Your Project Name
+Tech: Technologies used
+Details: Brief description of what you built and its impact.
+
+🎓 EDUCATION
+──────────────────────────────────────────────────────────────
+
+Degree: Your Degree
+University: Your University
+Year: Start – End
+
+📜 CERTIFICATIONS (optional)
+──────────────────────────────────────────────────────────────
+  - Certification Name — Platform/Organization
+
+──────────────────────────────────────────────────────────────
+PREFERRED LOCATIONS: Your preferred work locations
+──────────────────────────────────────────────────────────────
+
+💡 TIPS FOR BEST AI MATCHING:
+  1. Be specific about technologies (e.g., "Node.js" not just "JavaScript")
+  2. Include years of experience with each technology
+  3. Mention specific frameworks and tools you use daily
+  4. Include measurable achievements (percentages, metrics)
+  5. List certifications relevant to your target roles
+  6. Keep this file updated as you learn new skills
